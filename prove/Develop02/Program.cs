@@ -7,8 +7,9 @@ public class Program
          journal NewJournal = new journal();
          int _answer = 0;
          Console.WriteLine("Choose a number from this given options: \n 1. Write\n 2. Display\n 3. Load File\n 4. Save\n 5. Exit");
-         _answer = int.Parse(Consoaddle.ReadLine());
-
+         _answer = int.Parse(Console.ReadLine());
+      while(_answer != 5)
+      {
          if(_answer == 1)
          {
             NewJournal.AddToEntries();
@@ -40,7 +41,7 @@ public class Program
          {
             Console.WriteLine("Please pick a number.");
          }
-         
+      } 
     }
 
 }

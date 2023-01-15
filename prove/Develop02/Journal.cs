@@ -1,16 +1,18 @@
 using System;
 
 public class journal
-{  
-    List<entry> answers;
-    Prompts prompts;
+{   
+     //List <Entry> answers;
+    //public List<Entry> _AllEntries= new List<Entry>();
+    public List<Entry> answers;
+   // Prompts = prompts;
     
-    string file ="file.txt";
+    //string file ="file.txt";
 
     public  journal()
     {
-        answers = new List<entry>();
-        prompts = new Prompts();
+        answers = new List<Entry>();
+       // prompts = new Prompts();
 
     }   
     //This allows uers to enter answer
@@ -63,14 +65,14 @@ public class journal
         string date = DateTime.Now.ToString("MM/dd/yyyy");
         Console.WriteLine(prompts);
         String theResponse = Console.ReadLine();
-        entry  UserAnswer = new entry(prompts, theResponse, date);
+        Entry  UserAnswer = new Entry();
         answers.Add(UserAnswer);
 
     }
 
     public void ShowList()
     {
-        foreach (entry UserAnswer in answers)
+        foreach (Entry UserAnswer in answers)
         {
             Console.WriteLine($"Date: {UserAnswer._date} - Prompts: {UserAnswer._prompt}\n - {UserAnswer._response}");
         }
@@ -90,7 +92,7 @@ public class journal
     {
         using (StreamWriter SavedAnswer = new StreamWriter(file) )
         {
-            foreach (entry UserAnswer in answers)
+            foreach (Entry UserAnswer in answers)
             {
                 SavedAnswer.WriteLine($"Date: {UserAnswer._date} - Prompts: {UserAnswer._prompt}\n - {UserAnswer._response}");
             }

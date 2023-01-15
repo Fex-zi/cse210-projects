@@ -1,7 +1,7 @@
 using System;
 
 //This is the public class Job syntax
-public class entry
+public class Entry
 {
 
     public string _date = "";
@@ -10,11 +10,9 @@ public class entry
 
     public string _prompt = "";
     //constructor
-    public entry(string prompt, string response, string date)
+    public Entry()
     {
-        _prompt = prompt;
-        _response = response;
-        _date = date;
+       
     }
     
 }
