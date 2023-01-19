@@ -10,9 +10,11 @@ public class Entry
 
     public string _prompt = "";
     //constructor
-    public Entry()
+    public Entry(string prompt, string response, string date)
     {
-       
+        _prompt = prompt;
+        _response = response;
+        _date = date;
     }
     
 }

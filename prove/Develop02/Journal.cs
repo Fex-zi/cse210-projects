@@ -47,16 +47,16 @@ public class journal
         Console.WriteLine($"Date: {_date}");
     }
     */
-    /*public void TheEntries()
+    public void TheEntries()
     {   
         Console.WriteLine("Type here: ");
         string response = Console.ReadLine();
-        string MyFile = "file.txt";
-        using (StreamWriter outputFile = new StreamWriter(Myfile))
+        string file = "file.txt";
+        using (StreamWriter outputFile = new StreamWriter(file))
         {
             outputFile.WriteLine(response);
         }
-    }*/
+    }
 
     //Add entries to List
     public void AddToEntries()
@@ -65,7 +65,7 @@ public class journal
         string date = DateTime.Now.ToString("MM/dd/yyyy");
         Console.WriteLine(prompts);
         String theResponse = Console.ReadLine();
-        Entry  UserAnswer = new Entry();
+        Entry  UserAnswer = new Entry(theResponse, prompts, date);
         answers.Add(UserAnswer);
 
     }
