@@ -1,3 +1,4 @@
+
 using System;
 
 public class Magazine : LibraryItem
@@ -7,6 +8,8 @@ public class Magazine : LibraryItem
 
     public override void Print()
     {
-       
+        Console.WriteLine("Magazine Title: " + Title);
+        Console.WriteLine("Issue number: " + IssueNumber);
+        Console.WriteLine("Publication date: " + PublicationDate.ToShortDateString());
     }
 }

@@ -16,7 +16,10 @@ public class Library
         items.Add(book);
     }
 
-   
+    public void AddMagazine(Magazine magazine)
+    {
+        items.Add(magazine);
+    }
 
     public List<LibraryItem> GetInventory()
     {
@@ -36,10 +39,25 @@ public class Library
 
 public class LibraryInventory
     {
+        private List<LibraryItem> items = new List<LibraryItem>();
 
+        public void AddLibraryItem(LibraryItem item)
+        {
+            items.Add(item);
+        }
+
+        public void RemoveLibraryItem(LibraryItem item)
+        {
+            items.Remove(item);
+        }
+  
         public void PrintInventory()
         {
             Console.WriteLine("Inventory:");
-            
+            foreach (LibraryItem item in items)
+            {
+                item.Print();
+                Console.WriteLine();
+            }
         }
     }

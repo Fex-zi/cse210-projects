@@ -1,16 +1,16 @@
 using System;
 
+
 class Program
 {
-      static void Main(string[] args)
-        {
-            Library library = new Library();
+    static void Main(string[] args)
+    {
+        Library library = new Library();
 
-            UserInteraction userInteraction = new UserInteraction();
+        UserInput input = new UserInput();
+        UserChoice choice = new UserChoice(input, library);
+        UserOutput output = new UserOutput();
 
-            userInteraction.Start(library);
-
-            
-        }
-        
+        choice.Start(output);
+    }
 }
